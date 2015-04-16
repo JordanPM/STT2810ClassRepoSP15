@@ -21,7 +21,7 @@ prop.table(T2, 1)
 library(vcd)
 M1 <- matrix(c(25, 25, 25, 25), nrow = 2, byrow = 2)
 M1
-mosaic(M1)
+mosaicplot(M1)
 mosaic(M1, shade = TRUE)
 M2 <- matrix(c(10, 40, 30, 20), nrow = 2, byrow = 2)
 M2
@@ -29,10 +29,10 @@ E <- chisq.test(M2)$exp
 E
 (M2 - E)^2/E
 chisq.test(M2, correct = FALSE)
-mosaic(M2)
-mosaic(M2, shade = TRUE)
+mosaicplot(M2)
+mosaicplot(M2, shade = TRUE)
 # Revisit T2
-mosaic(T2, shade = TRUE)
+mosaicplot(T2, shade = TRUE)
 # Consider The Department
 T3 <- xtabs(Freq ~ Admit + Gender + Dept, data = UCB)
 T3
